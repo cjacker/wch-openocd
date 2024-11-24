@@ -1476,7 +1476,7 @@ int wlink_init(void)
 			wlink549=true;
 			break;
 		case 2:
-			wlink_name="WCH-LinkE-CH32V307  mod:RV";
+			wlink_name="WCH-LinkE-CH32V307 r0-1v2 mod:RV";
 			break;
 		case 3:
 			wlink_name="WCH-LinkS-CH32V203  mod:RV";
@@ -1484,9 +1484,15 @@ int wlink_init(void)
 		case 4:
 			wlink_name="WCH-LinkB  mod:RV";
 			break;
+		case 18:
+			wlink_name="WCH-LinkE-CH32V307 r0-1v3  mod:RV";
+			break;
 		default:
-			LOG_ERROR("unknow WCH-LINK ");	
-			goto error_wlink;
+			// do not report error when we did not know the version,
+			// hope it can support more WCH-LinkE devices in future.
+			LOG_WARNING("unknown reply: %d, WCH-LINK unknown version: %d.%d ", rxbuf[5], rxbuf[3], rxbuf[4]);
+			LOG_WARNING("If it not works properly, please report a issue to: https://github.com/cjacker/wch-openocd.");
+			wlink_name="WCH-Link Unknown version mod:RV";
 			break;
 		}
 		LOG_INFO("%s version %d.%d ",wlink_name, rxbuf[3], rxbuf[4]);

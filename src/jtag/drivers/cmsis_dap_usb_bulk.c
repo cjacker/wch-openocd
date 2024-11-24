@@ -658,11 +658,11 @@ void wlink_armversion(struct cmsis_dap *dap){
 			wlink_name="WCH-LinkE-CH32V307 r0-1v3  mod:ARM";
 			break;
 		default:
-			// do not report error when we did not know the version,
-			// hope it can support more WCH-LinkE devices in future.
-			LOG_WARNING("unknown reply: %d, WCH-Link unknown version: %d.%d ", rxbuf[5], rxbuf[3], rxbuf[4]);
-			LOG_WARNING("If it not works properly, please report a issue to: https://github.com/cjacker/wch-openocd.");
-			wlink_name="WCH-Link Unknown version mod:ARM";
+                        // do not report error with unknown version,
+                        // hope it could work with more WCH-LinkE devices in future.
+                        LOG_WARNING("Unknown version: %d.%d with reply value: %d", rxbuf[3], rxbuf[4], rxbuf[5]);
+                        LOG_WARNING("If it not works, report a issue with above line to: https://github.com/karlp/openocd-hacks");
+                        wlink_name="Unknown  mod:ARM";
 			break;
 		}
 	LOG_INFO("%s version %d.%d ",wlink_name, rxbuf[3], rxbuf[4]);

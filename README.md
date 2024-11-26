@@ -12,12 +12,14 @@ This repo is the latest source of WCH OpenOCD **(2024-11-26 version)**.
 There is two way to update WCH-LinkE firmware:
 
 1. If you have windows:
-Download [WCH-LinkUtility](https://www.wch.cn/downloads/WCH-LinkUtility_ZIP.html) and use it update WCH-LinkE firmware. when you connect to target, it will popup a window to ask you update firmware or not.
+   
+Download [WCH-LinkUtility](https://www.wch.cn/downloads/WCH-LinkUtility_ZIP.html) and use it update WCH-LinkE firmware. when connect to target, it will popup a window to ask you update firmware or not.
 
-3. If you have another workable WCH-LinkE:
+2. If you have another workable WCH-LinkE:
+   
 You can use it to flash the outdated WCH-LinkE, wire up RVSWD pins of two WCH-LinkE and hold the IAP button of target WCH-LinkE down when power on and flash corresponding firmware to outdated WCH-LinkE. for example, the firmware for CH32V305FBP6 is 'WCH-LinkE-APP-IAP.bin' shipped within WCH-LinkUtility.
 
-**I highly DO NOT suggest way 2, since it's very easy to brick a WCH-LinkE if you flash a wrong firmware.**
+**I highly DO NOT suggest the second way, since it's very very very easy to brick a WCH-LinkE and very very very difficult to rescue if you flash a wrong firmware.**
 
 
 

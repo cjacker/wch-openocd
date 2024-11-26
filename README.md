@@ -1,4 +1,4 @@
-# Latest source of official WCH OpenOCD
+# Latest source of official WCH OpenOCD (2024-11-26 version)
 
 This repo is the latest source of WCH OpenOCD **(2024-11-26 version)**.
 

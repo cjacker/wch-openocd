@@ -1,4 +1,5 @@
 noinst_LTLIBRARIES += %D%/libriscv.la
+%C%_libriscv_la_CPPFLAGS = $(AM_CPPFLAGS) -Wno-incompatible-pointer-types
 %C%_libriscv_la_SOURCES = \
        %D%/asm.h \
        %D%/batch.h \

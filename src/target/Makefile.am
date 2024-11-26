@@ -1,7 +1,7 @@
 %C%_libtarget_la_LIBADD = %D%/openrisc/libopenrisc.la \
 	%D%/riscv/libriscv.la
 
-%C%_libtarget_la_CPPFLAGS = $(AM_CPPFLAGS)
+%C%_libtarget_la_CPPFLAGS = $(AM_CPPFLAGS) -Wno-incompatible-pointer-types -Wno-implicit-function-declaration
 
 STARTUP_TCL_SRCS += %D%/startup.tcl
 

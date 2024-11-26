@@ -5,7 +5,7 @@ noinst_LTLIBRARIES += %D%/libocdjtagdrivers.la
 	$(DRIVERFILES) \
 	$(DRIVERHEADERS)
 
-%C%_libocdjtagdrivers_la_CPPFLAGS = $(AM_CPPFLAGS)
+%C%_libocdjtagdrivers_la_CPPFLAGS = $(AM_CPPFLAGS) -Wno-incompatible-pointer-types
 
 ULINK_FIRMWARE = %D%/OpenULINK
 

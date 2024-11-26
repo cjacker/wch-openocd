@@ -1861,6 +1861,30 @@ void wlink_code_erase(void){
 	pReadData(0, 1, rxbuf, &len);
 }
 
+int wlink_quit(void)
+{
+#ifdef _WIN32
+	if (gOpen)
+	{
+		if(iocontrol!=4)
+			wlink_endprocess();
+		pCloseDev(gIndex);
+		gOpen = FALSE;
+	}
+	if (hModule)
+	{
+		FreeLibrary(hModule);
+		hModule = 0;
+	}
+#else if
+	if(iocontrol!=4)
+		wlink_endprocess();
+	jtag_libusb_close(wfd);
+#endif
+	return ERROR_OK;
+}
+
+
 
 int wlink_init(void)
 {
@@ -2323,29 +2347,6 @@ error_wlink:
 	}
 	return ERROR_FAIL;
 #endif
-}
-
-int wlink_quit(void)
-{
-#ifdef _WIN32
-	if (gOpen)
-	{
-		if(iocontrol!=4)
-			wlink_endprocess();
-		pCloseDev(gIndex);
-		gOpen = FALSE;
-	}
-	if (hModule)
-	{
-		FreeLibrary(hModule);
-		hModule = 0;
-	}
-#else if
-	if(iocontrol!=4)
-		wlink_endprocess();
-	jtag_libusb_close(wfd);
-#endif
-	return ERROR_OK;
 }
 
 void wlink_disabledebug(void)

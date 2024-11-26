@@ -1,4 +1,5 @@
 noinst_LTLIBRARIES += %D%/libserver.la
+%C%_libserver_la_CPPFLAGS = $(AM_CPPFLAGS) -Wno-incompatible-pointer-types
 %C%_libserver_la_SOURCES = \
 	%D%/server.c \
 	%D%/telnet_server.c \

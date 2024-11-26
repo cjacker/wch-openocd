@@ -31,7 +31,7 @@ extern bool noloadflag;
 extern int wlink_flash_protect(bool stat);
 extern int wlnik_protect_check(void);
 extern void wlink_clean(void);
-extern  wlink_quitreset(void);
+extern int wlink_quitreset(void);
 extern void wlink_chip(void);
 extern unsigned long wlink_address;
 extern bool pageerase;

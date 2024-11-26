@@ -5,7 +5,7 @@ This repo is the latest source of WCH OpenOCD **(2024-11-26 version)**.
 - work with all version of WCH-Link / LinkE / LinkS / LinkW debuggers.
 - support program / debug all WCH ch32v/x/l series MCUs and some MCU models in future.
 
-**Please make sure your WCH-Link/E already update to the latest firmware to void possible error when programming. If you do not want to update WCH-LinkE, you can stay with old version WCH OpenOCD.**
+**Please make sure your WCH-Link/E already update to the latest firmware to void possible error when programming. If you do not want to update WCH-LinkE, you can stay with [old version WCH OpenOCD](https://github.com/cjacker/wch-openocd-2022).**
 
 ## Update WCH-LinkE firmware
 

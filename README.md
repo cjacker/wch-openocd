@@ -2,26 +2,10 @@
 
 This repo is the latest source of WCH OpenOCD **(2024-11-26 version)**.
 
-- support WCH-Link / LinkE / LinkS / LinkW debuggers.
+- support WCH-Link / LinkE / LinkS / LinkW debuggers with latest firmware.
 - support program / debug all WCH ch32v/x/l series MCUs and some MCU models in future.
 
-**Please make sure your WCH-Link/E already update to the latest firmware to void possible error when programming. If you do not want to update WCH-LinkE, you can stay with [old version WCH OpenOCD](https://github.com/cjacker/wch-openocd-2022).**
-
-## Update WCH-LinkE firmware
-
-There is two way to update WCH-LinkE firmware:
-
-1. If you have windows:
-   
-Download [WCH-LinkUtility](https://www.wch.cn/downloads/WCH-LinkUtility_ZIP.html) and use it update WCH-LinkE firmware. when connect to target, it will popup a window to ask you update firmware or not.
-
-2. If you have another workable WCH-LinkE:
-   
-You can use it to flash the outdated WCH-LinkE, wire up RVSWD pins of two WCH-LinkE and hold the IAP button of target WCH-LinkE down when power on and flash corresponding firmware to outdated WCH-LinkE. for example, the firmware for CH32V305FBP6 is 'WCH-LinkE-APP-IAP.bin' shipped within WCH-LinkUtility.
-
-**I highly DO NOT suggest the second way, since it's very very very easy to brick a WCH-LinkE and very very very difficult to rescue if you flash a wrong firmware.**
-
-
+**To update to latest firmware, read "[how to update firmware of WCH-Link/LinkE](https://github.com/cjacker/opensource-toolchain-ch32v#how-to-update-firmware-of-wch-linke)". If you do not want to update your WCH-Link/E, you can stay with [old version WCH OpenOCD](https://github.com/cjacker/wch-openocd-2022).**
 
 ## Installation
 
